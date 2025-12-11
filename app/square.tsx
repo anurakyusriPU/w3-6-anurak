@@ -44,4 +44,4 @@ const styles = StyleSheet.create({
         width: "80%",
         borderColor:"green"
     }
-})
+})anurakyusriPU

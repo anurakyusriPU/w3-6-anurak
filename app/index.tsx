@@ -8,8 +8,8 @@ export default function App(){
 
     return(
         <View style={styles.container}>
-            <Text style={styles.mainTite}>หน้่าแรก</Text>
-            <Button title="ไปหน้า 2" onPress={() => router.navigate('/square')} />
+            <Text style={styles.mainTite}>หน้าแรก</Text>
+            <Button title="ไปหน้า2" onPress={() => router.navigate('/square')} />
         </View>
     )
 }

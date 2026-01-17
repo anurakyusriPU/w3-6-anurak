@@ -6,36 +6,31 @@ export default function Square(){
     // พท.สี่เหลี่ยม = กว้าง * ยาว
     // output = input * input
     //    50  =  5 * 10
-    const [width, setWidth] = useState(0) // wwidth = 20, selwidth(20)
-    const [lenght, setLenght] = useState(0)
-    const [area, setArea] = useState(0)
+    const [F, setF] = useState(0) // wwidth = 20, selwidth(20)
+    const [C, setC] = useState(0)
+    
 
-    function calSquare(){
-        let result = width * lenght
-        setArea(result)
+    function calC(){
+        let result =  5/9 * (F - 32)
+        setC(result)
     }
     
     return(
         <View style={styles.container}>
-            <Text style={styles.mainTite}>คำนวณพื้นที่สี่เหลื่ยม</Text>
+            <Text style={styles.mainTite}>ฟาเรนไฮต์เป็นเซลเซียส</Text>
             {/*<Button title="กลับหน้าแรก" /> */}
 
-            <Text>กว้าง {width} ซม.ยาว {lenght} ซม. พื้นที่คือ {area} ตร.ซม.</Text>
+            <Text>F {F} C {C} </Text>
 
             <TextInput 
                 style={styles.TextInput} 
                 placeholder="กรอกความกว้าง" 
-                value={width.toString()}
-                onChangeText={(w) => setWidth(Number(w))}
+                value={F.toString()}
+                onChangeText={(w) => setF(Number(w))}
             />
-            <TextInput 
-            value={lenght.toString()}
-            onChangeText={(l) => setLenght(Number(l))}
-            style={styles.TextInput} 
-            placeholder="กรอกความยาว" />
 
-            <Button title="คำนวณ" onPress={() => calSquare()}/>
-                <Button title="ไปหน้าที่3" onPress={() => router.navigate('/FTC')}/>
+            <Button title="คำนวณ" onPress={() => calC()}/>
+                <Button title="ไปหน้าที่ 2" onPress={() => router.navigate('/square')}/>
                 <Button title="กลับหน้าหลัก" onPress={() => router.navigate('/')}/>
         </View>
     )
